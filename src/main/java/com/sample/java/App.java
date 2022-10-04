@@ -1,13 +1,13 @@
 package com.sample.java;
 
 /**
- * Hello world!
+ * Hello Jenkins world!
  *
  */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        System.out.println( "Hello Jenkins World!" );
     }
 }
