@@ -1,5 +1,5 @@
-def output = 'Maven'
-def x = '10'
+def output = 'From Jenkins'
+def x = '1010'
 pipeline {
     agent any
 
