@@ -1,7 +1,9 @@
 def output = 'From Jenkins'
 def x = '1010'
 pipeline {
-    agent 'slave-node'
+    agent {
+        label 'slave-node'
+    }
 
     stages {
         stage('checkout') {
