@@ -8,6 +8,6 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello CI/CD  pipeline automation world!" );
+        System.out.println( "Hello  pipeline automation world!" );
     }
 }
