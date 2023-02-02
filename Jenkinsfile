@@ -41,8 +41,5 @@ pipeline {
             sh 'mvn package'
           }
         }
-        stage ('CleanUP') {
-         cleanWs() 
-        }
     }
 }
