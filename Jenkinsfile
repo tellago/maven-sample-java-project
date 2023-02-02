@@ -19,9 +19,6 @@ pipeline {
                 echo "Print value ${x}"
             }
         }
-            agent any
-
-    stages {
 
         stage('Build') {
 
@@ -29,7 +26,7 @@ pipeline {
                 sh 'github.com/tellago/maven-sample-java-project.git'
             }
         }
-    }
+    
                stage('validate') {
                steps {
                sh 'mvn validate'
