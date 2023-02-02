@@ -1,11 +1,9 @@
-def output = 'From Jenkins'
-def x = '1010'
+def output = 'maven'
+def x = '10'
 pipeline {
-    agent {
-        label 'slave-node'
-    }
-
-    stages {
+    agent any
+        
+        stages {
         stage('checkout') {
             steps {
               git 'https://github.com/tellgo/maven-sample-java-project.git'
