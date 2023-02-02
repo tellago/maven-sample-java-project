@@ -19,9 +19,23 @@ pipeline {
                 echo "Print value ${x}"
             }
         }
-        stage('validate') {
-          steps {
-            sh 'mvn validate'
+                pipeline {
+                    
+                agent any
+
+    stages {
+
+        stage('Build') {
+
+            steps {
+                sh 'github.com/tellago/maven-sample-java-project.git'
+            }
+        }
+    }
+                }
+               stage('validate') {
+               steps {
+               sh 'mvn validate'
             }
           }
         stage('compile') {
@@ -41,3 +55,4 @@ pipeline {
         }
     }
 }
+
