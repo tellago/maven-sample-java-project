@@ -19,9 +19,7 @@ pipeline {
                 echo "Print value ${x}"
             }
         }
-                pipeline {
-                    
-                agent any
+            agent any
 
     stages {
 
@@ -32,7 +30,6 @@ pipeline {
             }
         }
     }
-                }
                stage('validate') {
                steps {
                sh 'mvn validate'
