@@ -6,10 +6,9 @@ pipeline {
             stages {
         stage('Checkout Codebase'){
             steps{
-                checkout scm: [$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[credentialsId: 'PUBLIC_KEY', url:' https://github.com/tellago/maven-sample-java-project.git']]
+                checkout scm: [$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[credentialsId: 'PUBLIC_KEY', url:' https://github.com/tellago/maven-sample-java-project.git']]]
                                }
-        
-        }
+                               }
         stage('Hello') {
             steps {
                 echo "Hello World ${output}"
