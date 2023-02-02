@@ -6,7 +6,7 @@ pipeline {
         stages {
         stage('checkout') {
             steps {
-              git 'https://github.com/tellgo/maven-sample-java-project.git'
+              checkout scm: [$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[credentialsId: 'PUBLIC_KEY', url: 'https://github.com/tellgo/maven-sample-java-project.git']]
               }
         }
         stage('Hello') {
