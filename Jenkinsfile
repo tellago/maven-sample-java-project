@@ -19,15 +19,7 @@ pipeline {
                 echo "Print value ${x}"
             }
         }
-
-        stage('Build') {
-
-            steps {
-                sh 'github.com/tellago/maven-sample-java-project.git'
-            }
-        }
-    
-               stage('validate') {
+         stage('validate') {
                steps {
                sh 'mvn validate'
             }
