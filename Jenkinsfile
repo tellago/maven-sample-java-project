@@ -1,9 +1,10 @@
 def output = 'maven'
 def x = '10'
 pipeline {
-    agent 'slave-node'
-    
-            stages {
+    agent { 
+       label 'slave-node'
+    }
+         stages {
         stage('Checkout Codebase'){
             steps{
                 checkout scm: [$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[credentialsId: 'PUBLIC_KEY', url:' https://github.com/tellago/maven-sample-java-project.git']]]
