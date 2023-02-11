@@ -1,7 +1,7 @@
 def output = 'maven'
 def x = '10'
 pipeline {
-    agent any
+    agent 'slave-node'
     
             stages {
         stage('Checkout Codebase'){
