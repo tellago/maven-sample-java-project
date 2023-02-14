@@ -40,6 +40,11 @@ pipeline {
             sh 'mvn package'
           }
         }
+             stage ('CleanUp') {
+                 steps {
+                     cleanWs()
+                 }
+             }
     }
 }
 
